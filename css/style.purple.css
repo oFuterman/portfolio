@@ -98,7 +98,7 @@ body {
 }
 
 .bg-primary {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .bg-black {
@@ -114,7 +114,7 @@ body {
 }
 
 .text-primary {
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 .btn.filter,
@@ -229,7 +229,7 @@ section .headul {
 
 section.bg-image .headul:before,
 section.bg-image .headul:after{
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 section.white-text .headul:before,
@@ -241,7 +241,7 @@ section .headul:before {
     content: " ";
     width: 220px;
     height: 2px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     margin: 0 auto;
     display: block;
 }
@@ -251,7 +251,7 @@ section .headul:after {
     content: " ";
     width: 60px;
     height: 6px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     display: block;
 }
 
@@ -270,7 +270,7 @@ section .headul:after {
     content: " ";
     width: 60px;
     height: 6px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     display: block;
 }
 
@@ -482,7 +482,7 @@ h6 {
 }
 
 a {
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 a:hover,
@@ -503,9 +503,13 @@ section.bg-primary p {
 
 @media (max-width: 1200px) {
 
+    #pieHeadUl {
+        margin: 7px 0px 110px 0;
+    }
+
     .h1,
     h1 {
-        font-size: 55px;
+        font-size: 50px;
         line-height: 85px;
     }
 
@@ -552,11 +556,13 @@ section.bg-primary p {
 
 }
 
+
+
 @media (max-width: 992px) {
 
     .h1,
     h1 {
-        font-size: 50px;
+        font-size: 47px;
         line-height: 75px;
     }
 
@@ -589,8 +595,9 @@ section.bg-primary p {
         font-size: 14px;
         line-height: 24px;
     } 
+
     section .headul{
-        margin: 30px auto 45px auto;
+        margin: 30px auto 110px auto;
     }
 
     section .headul:before{
@@ -607,7 +614,7 @@ section.bg-primary p {
 @media only screen and (max-width: 768px) {
     .h1,
     h1 {
-        font-size: 40px;
+        font-size: px;
         line-height: 65px;
     }
 
@@ -712,7 +719,7 @@ section.bg-primary p {
 }
 
 .angled_up_outside.primary {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .angled_up_outside.white .slope.upright,
@@ -728,7 +735,7 @@ section.bg-primary p {
     min-height: 200px;
     margin-top: -75px;
     position: relative;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     z-index: 10;
     width: 100%;
 }
@@ -759,7 +766,7 @@ section.bg-primary p {
 
 .angled_down_outside.primary,
 .angled_down_outside.primary.lightgray {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 
@@ -830,7 +837,7 @@ section.bg-primary p {
 .angled_up_inside.primary,
 .angled_up_inside.primary .slope.upright,
 .angled_up_inside.primary .slope.upleft {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .angled_up_inside.white,
@@ -889,7 +896,7 @@ section.bg-primary p {
 .angled_down_inside.primary,
 .angled_down_inside.primary .slope.upright,
 .angled_down_inside.primary .slope.upleft {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .angled_down_inside.white,
@@ -947,13 +954,13 @@ section.header .container .logo span {
     font-size: 30px;
     text-align: left;
     text-transform: uppercase;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     line-height: 35px;
 }
 
 section.header .container .logo span:after {
     content: " ";
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     width: 30px;
     height: 4px;
     margin-top: 10px;
@@ -1058,7 +1065,7 @@ section.header .container .menu-mobile i.menu-toggle {
 section.header .container .menu-mobile.open i.menu-toggle,
 section.header .container .menu-mobile i.menu-toggle:hover {
     background: #212121;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 section.header .container .menu-mobile ul.menu,
@@ -1108,12 +1115,12 @@ section.header .container .menu-mobile.open ul.menu {
     .menu-mobile.cssmenu ul li a {
         background-color: rgba(33, 33, 33, 1);
         text-align: left;
-        color: #29b6f6;
+        color: rgb(164, 57, 214);
         border-left: 3px solid transparent;
     }
     .menu-mobile.cssmenu ul li a:hover {
-        color: #29b6f6;
-        border-left: 3px solid #29b6f6;
+        color: rgb(164, 57, 214);
+        border-left: 3px solid rgb(164, 57, 214);
         background-color: rgba(45, 45, 45, 1);
     }
     .menu-mobile.cssmenu ul li.has-sub a i {
@@ -1169,7 +1176,7 @@ section.header .container .menu-mobile.open ul.menu {
     }
     .menu-mobile.cssmenu > ul > li:hover > a,
     .menu-mobile.cssmenu > ul > li.active > a {
-        color: #29b6f6;
+        color: rgb(164, 57, 214);
     }
     section.header .container .menu-mobile.cssmenu > ul > li > a,
     section.header .container .menu-mobile.cssmenu > ul > ul > li > a {
@@ -1288,11 +1295,11 @@ section.header .container .menu-mobile.open ul.menu {
     text-transform: uppercase;
     color: #212121;
     text-align: center;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .menu .black .cssmenu > ul > li > a {
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     background-color: #212121;
 }
 
@@ -1339,7 +1346,7 @@ section.header .container .menu-mobile.open ul.menu {
 .cssmenu ul ul li a {
     width: 170px;
     font-size: 15px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     padding: 0 25px;
     line-height: 40px;
     font-size: 14px;
@@ -1351,7 +1358,7 @@ section.header .container .menu-mobile.open ul.menu {
 
 .cssmenu ul ul li:hover > a,
 .cssmenu ul ul li a:hover {
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 .cssmenu ul ul li.has-sub > a:after {}
@@ -1366,7 +1373,7 @@ section.header .container .menu-mobile.open ul.menu {
 }
 
 .cssmenu ul ul li.has-sub:hover > a:after {
-    border-color: #29b6f6;
+    border-color: rgb(164, 57, 214);
 }
 
 .cssmenu ul ul li.has-sub a i {
@@ -1495,7 +1502,7 @@ section.header .overlay .black {
 section.header .overlay .primary {
     width: 40%;
     height: 100%;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     opacity: 0.8;
     left: 60%;
     top: 0px;
@@ -1513,14 +1520,14 @@ section.header .maintext {
 section.header .maintext .primary-text {
     display: inline-block;
     width: 60%;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     float: left;
 }
 
 section.header .maintext .black-text {
     display: inline-block;
     width: 40%;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     float: left;
 }
 
@@ -1533,7 +1540,7 @@ section.header .maintext .primary-text div {
 section.header .maintext .primary-text h4,
 section.header .maintext .primary-text h1 {
     text-align: left;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     white-space: nowrap;
     display: block;
     text-transform: uppercase;
@@ -1556,7 +1563,7 @@ section.header .maintext .primary-text h4 {
 section.header .maintext .primary-text div {
     padding-right: 10px;
     padding-left: 30px;
-    border-left: 10px solid #29b6f6;
+    /* border-left: 10px solid rgb(164, 57, 214); */
 }
 
 section.header .maintext .black-text div {
@@ -1613,6 +1620,19 @@ section.header.header-small .header-img {
 
 /* Large Devices, Wide Screens */
 
+@media only screen and (max-width: 1400px) {
+
+    #pieHeadUl {
+        margin: 7px 0px 110px 0;
+    }
+    section.header .maintext .primary-text h1,
+    section.header .maintext .black-text h1 {
+        font-size: 80px;
+        line-height: 65px;
+    }
+
+}
+
 @media only screen and (max-width: 1200px) {
 
 
@@ -1622,7 +1642,7 @@ section.header.header-small .header-img {
 
     section.header .maintext .primary-text h1,
     section.header .maintext .black-text h1 {
-        font-size: 80px;
+        font-size: 70px;
         line-height: 65px;
     }
     section.header .maintext .primary-text h4 {
@@ -1669,11 +1689,11 @@ section.header.header-small .header-img {
     }
     section.header .maintext .primary-text h1,
     section.header .maintext .black-text h1 {
-        font-size: 65px;
+        font-size: 53px;
         line-height: 50px;
     }
     section.header .maintext .primary-text h4 {
-        font-size: 30px;
+        font-size: 26px;
         line-height: 20px;
     }
 
@@ -1683,11 +1703,11 @@ section.header.header-small .header-img {
 
     section.header.header-small .maintext .primary-text h1,
     section.header.header-small .maintext .black-text h1 {
-        font-size: 70px;
+        font-size: 60px;
         line-height: 54px;
     }
     section.header.header-small .maintext .primary-text h4 {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 20px;
     }
     section.header.header-small .maintext .black-text h1 {
@@ -1701,7 +1721,7 @@ section.header.header-small .header-img {
 @media only screen and (max-width: 768px) {
     section.header .maintext .primary-text h1,
     section.header .maintext .black-text h1 {
-        font-size: 60px;
+        font-size: 51px;
         line-height: 48px;
     }
     section.header .maintext .primary-text h4 {
@@ -1745,9 +1765,9 @@ section.header.header-small .header-img {
         padding-top: 40%;
     }
 
-    section.header .maintext .primary-text div{
-        border-left: 5px solid #29b6f6;
-    }
+    /* section.header .maintext .primary-text div{
+        border-left: 5px solid rgb(164, 57, 214);
+    } */
 
     section.header .overlay .black{
         width: 50%;
@@ -1785,11 +1805,11 @@ section.header.header-small .header-img {
 @media only screen and (max-width: 580px) {
 
     section.header .maintext .primary-text h4{
-        font-size: 18px;
+        font-size: 14px;
     }
 
     section.header .maintext .primary-text h1, section.header .maintext .black-text h1{
-        font-size: 48px;        
+        font-size: 42px;        
         line-height: 36px;
     }
 
@@ -1809,7 +1829,7 @@ section.header.header-small .header-img {
         line-height: 36px;
     }
     section.header.header-small .maintext .primary-text h4 {
-        font-size: 18px;
+        font-size: 15px;
         line-height: 20px;
     }
 
@@ -1834,7 +1854,7 @@ section.header.header-small .header-img {
     }
 
     section.header .maintext .primary-text h1, section.header .maintext .black-text h1{
-        font-size: 32px;
+        font-size: 27px;
         line-height: 24px;
     }
 
@@ -1852,7 +1872,7 @@ section.header.header-small .header-img {
         line-height: 24px;
     }
     section.header.header-small .maintext .primary-text h4 {
-        font-size: 18px;
+        font-size: 15px;
         line-height: 20px;
     }
 
@@ -1869,18 +1889,18 @@ section.header.header-small .header-img {
     }
 
     section.header .maintext .primary-text h1, section.header .maintext .black-text h1{
-        font-size: 30px;
+        font-size: 24px;
         line-height: 20px;
     }
 
-    section.header .maintext .primary-text div{
-        border-left: 3px solid #29b6f6;
+    /* section.header .maintext .primary-text div{
+        border-left: 3px solid rgb(164, 57, 214);
         padding-left: 10px;
-    }
+    } */
 
     section.header.header-small .maintext .primary-text h1,
     section.header.header-small .maintext .black-text h1 {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 20px;
     }
 
@@ -1905,14 +1925,14 @@ section.header.header-small .header-img {
     }
 
     section.header .maintext .primary-text h1, section.header .maintext .black-text h1{
-        font-size: 14px;
+        font-size: 12px;
         line-height: 10px;
     }
 
-    section.header .maintext .primary-text div{
-        border-left: 2px solid #29b6f6;
+    /* section.header .maintext .primary-text div{
+        border-left: 2px solid rgb(164, 57, 214);
         padding-left: 10px;
-    }
+    } */
 
     section.header.header-small .maintext .primary-text h1,
     section.header.header-small .maintext .black-text h1 {
@@ -2006,7 +2026,7 @@ section.header-parallax.fixed-top .topbar {
 }
 
 section.header-parallax.fixed-top .topbar .menu .primary {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     height: 50px;
     padding-top: 0px;
 }
@@ -2055,7 +2075,7 @@ section.header-parallax.fixed-top .container .logo span:after {
 @media only screen and (max-width: 992px) {
     section.header.header-parallax.fixed-top .header-logo-wrap {
         position: fixed;
-        background-color: #29b6f6;
+        background-color: rgb(164, 57, 214);
         height: 50px;
     }
 }
@@ -2103,7 +2123,7 @@ section.header-parallax.fixed-top .container .logo span:after {
 .product .pic .cart-layer a i,
 .product .pic .cart-layer a i:hover {
     font-size: 42px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 .product .pic .best-seller {
@@ -2112,7 +2132,7 @@ section.header-parallax.fixed-top .container .logo span:after {
     top: 0px;
     left: 0px;
     width: 120px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     height: 50px;
     line-height: 50px;
     padding-left: 15px;
@@ -2134,7 +2154,7 @@ section.header-parallax.fixed-top .container .logo span:after {
     content: " ";
     width: 30px;
     height: 50px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     position: absolute;
     right: -15px;
     -moz-transform: skewX(-30deg);
@@ -2147,7 +2167,7 @@ section.header-parallax.fixed-top .container .logo span:after {
 }
 
 .product .info {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     display: inline-block;
     width: 100%;
     position: relative;
@@ -2393,7 +2413,7 @@ section.header-parallax.fixed-top .container .logo span:after {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 10px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 .fontawesome div:hover,
@@ -2452,7 +2472,7 @@ section.whatwhyhow .container {
     height: 100px;
     line-height: 100px;
     text-align: center;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     margin: 0 0 25px 0;
     text-transform: uppercase;
 }
@@ -2506,7 +2526,7 @@ section.whatwhyhow .container {
         height: 70px;
         line-height: 70px;
         text-align: center;
-        background-color: #29b6f6;
+        background-color: rgb(164, 57, 214);
         margin: 0 0 25px 0;
         text-transform: uppercase;
         font-size: 30px;
@@ -2561,13 +2581,13 @@ section.footer .container .logo span {
     font-size: 30px;
     text-align: left;
     text-transform: uppercase;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     line-height: 35px;
 }
 
 section.footer .container .logo span:after {
     content: " ";
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     width: 30px;
     height: 4px;
     margin-top: 10px;
@@ -2918,8 +2938,8 @@ section#pricing .angled_down_outside{
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 140px;
-    background-color: #29b6f6;
+    width: 50px;
+    background-color: rgb(164, 57, 214);
     height: 50px;
 }
 
@@ -2928,7 +2948,7 @@ section#pricing .angled_down_outside{
     content: " ";
     width: 30px;
     height: 50px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     position: absolute;
     left: -15px;
     -moz-transform: skewX(30deg);
@@ -2974,7 +2994,7 @@ section#pricing .angled_down_outside{
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     margin: 22px auto 0 auto;
 }
 
@@ -3024,7 +3044,7 @@ section#pricing .angled_down_outside{
 }
 
 .btn.btn-primary {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     color: #212121;
 }
 
@@ -3032,13 +3052,13 @@ section#pricing .angled_down_outside{
 .btn.btn-primary:focus {
     outline: none;
     color: #212121;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .btn-primary.disabled:hover,
 .btn-primary.disabled:active,
 .btn-primary.disabled:focus {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     border-color: transparent;
 }
 
@@ -3094,7 +3114,7 @@ section#pricing .angled_down_outside{
 .blog .info .date {
     margin-bottom: 15px;
     text-transform: uppercase;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     font-weight: bold;
     display: block;
 }
@@ -3251,7 +3271,7 @@ section#pricing .angled_down_outside{
 .feature .icon i {
     font-size: 48px;
     line-height: 55px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     vertical-align: top;
     width: 80px;
     float: left;
@@ -3451,7 +3471,7 @@ section.capabilities {
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     margin: 25px auto 20px auto;
     content: " ";
 }
@@ -3923,7 +3943,7 @@ section.services .angled_down_outside{
     text-align: center;
     padding: 0;
     min-width: 40px;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
 }
 
 .btn.filter {
@@ -3932,7 +3952,7 @@ section.services .angled_down_outside{
 
 .btn.filter:hover,
 .btn.active.filter {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     background-image: none;
     outline: 0;
     -webkit-box-shadow: none;
@@ -4095,7 +4115,7 @@ input:focus,
 textarea:active,
 textarea:focus {
     outline: none;
-    border: 1px solid #29b6f6;
+    border: 1px solid rgb(164, 57, 214);
 }
 
 .contact-person {
@@ -4139,7 +4159,7 @@ textarea:focus {
 }
 
 .contact-person .info .social a i {
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     font-size: 15px;
     margin-right: 10px;
 }
@@ -4221,7 +4241,7 @@ section.section-madefor.bg-primary .headul:before {
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     opacity: 1;
 }
 
@@ -4279,11 +4299,11 @@ section.twitter .main-icon {
 
 section.twitter .main-icon i {
     font-size: 36px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     height: 100px;
     width: 100px;
     line-height: 88px;
-    border: 2px solid #29b6f6;
+    border: 2px solid rgb(164, 57, 214);
     border-radius: 50%;
     -o-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -4323,7 +4343,7 @@ section.twitter li {
 }
 
 .owl-theme .owl-controls .owl-buttons div {
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     background-color: transparent;
     opacity: 1;
     margin: 0px 10px;
@@ -4333,7 +4353,7 @@ section.twitter li {
 
 .owl-theme .owl-controls .owl-buttons div i {
     font-size: 36px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 .owl-theme .owl-controls {
@@ -4439,8 +4459,8 @@ body.horizontal section.clients{
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus,
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
     color: #212121;
-    background-color: #29b6f6;
-    border-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
+    border-color: rgb(164, 57, 214);
 }
 
 
@@ -4557,7 +4577,7 @@ body.horizontal section.clients{
     margin: 0 10px 0px 0;
     font-size: 12px;
     line-height: 22px;
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 
@@ -4718,7 +4738,7 @@ body.horizontal section.clients{
     width: 30px;
     margin: 0 10px 10px 0px;
     cursor: pointer;
-    background-color: #29b6f6;
+    background-color: rgb(164, 57, 214);
     float: left;
 }
 
@@ -4733,12 +4753,12 @@ body.horizontal section.clients{
 
 .settings-panel .style div.active,
 .settings-panel .style div.active i{
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
 }
 
 .settings-panel .style div:hover,
 .settings-panel .style div:hover i{
-    color: #29b6f6;
+    color: rgb(164, 57, 214);
     cursor: pointer;
 }
 
@@ -4857,3 +4877,19 @@ body.horizontal section.clients{
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width: 320px) {}
+
+img.img-responsive {
+    box-shadow: 0px 0px 25px 5px;
+}
+
+img.img-responsive:active {
+    box-shadow: none !important;
+}
+
+.link-icon {
+    box-shadow: none !important;
+}
+
+#space{
+    height:30px;
+}

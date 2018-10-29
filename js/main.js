@@ -4,7 +4,7 @@
  * This file is part of Caliber - Multi Purpose HTML package.
  */
 
-jQuery(function($) {
+jQuery(function ($) {
 
     'use strict';
 
@@ -16,7 +16,7 @@ jQuery(function($) {
         Gallery Filtering (MixItUp)
      --------------------------------*/
 
-    CALIBER_SETTINGS.galleryFiltering = function() {
+    CALIBER_SETTINGS.galleryFiltering = function () {
 
         if ($.isFunction($.fn.mixItUp)) {
 
@@ -43,7 +43,7 @@ jQuery(function($) {
         Gallery Filtering (MixItUp)
      --------------------------------*/
 
-    CALIBER_SETTINGS.fancyBox = function() {
+    CALIBER_SETTINGS.fancyBox = function () {
         if ($.isFunction($.fn.fancybox)) {
             $('.fancybox').fancybox();
         }
@@ -53,7 +53,7 @@ jQuery(function($) {
     /*--------------------------------
         Parallax Scrolling
      --------------------------------*/
-    CALIBER_SETTINGS.parallaxScrolling = function() {
+    CALIBER_SETTINGS.parallaxScrolling = function () {
 
         if ($.isFunction($.fn.localScroll)) {
             $('#parallax-nav-primary').localScroll(800);
@@ -87,7 +87,7 @@ jQuery(function($) {
         Fixed Header Menu for Parallax
      --------------------------------*/
 
-    CALIBER_SETTINGS.fixedParallaxHeader = function() {
+    CALIBER_SETTINGS.fixedParallaxHeader = function () {
 
         if ($.isFunction($.fn.parallax)) {
             //  alert($(window).scrollTop() +" "+$("#slides").height());
@@ -105,7 +105,7 @@ jQuery(function($) {
         Twitter Carousel
      --------------------------------*/
 
-    CALIBER_SETTINGS.twitterCarousel = function() {
+    CALIBER_SETTINGS.twitterCarousel = function () {
 
         if ($.isFunction($.fn.owlCarousel)) {
 
@@ -130,7 +130,7 @@ jQuery(function($) {
         Image Carousel (Made for you Section)
      --------------------------------*/
 
-    CALIBER_SETTINGS.imageCarousel = function() {
+    CALIBER_SETTINGS.imageCarousel = function () {
 
         if ($.isFunction($.fn.owlCarousel)) {
 
@@ -143,7 +143,7 @@ jQuery(function($) {
                 goToFirstSpeed: 2000,
                 singleItem: true,
                 autoHeight: true,
-                lazyLoad : true,
+                lazyLoad: true,
                 transitionStyle: "fade"
             });
 
@@ -155,7 +155,7 @@ jQuery(function($) {
         Slider Header Carousel
      --------------------------------*/
 
-    CALIBER_SETTINGS.headerSliderCarousel = function() {
+    CALIBER_SETTINGS.headerSliderCarousel = function () {
 
         if ($.isFunction($.fn.owlCarousel)) {
 
@@ -168,7 +168,7 @@ jQuery(function($) {
                 paginationSpeed: 1000,
                 goToFirstSpeed: 2000,
                 singleItem: true,
-                lazyLoad : true,
+                lazyLoad: true,
                 autoHeight: true,
                 transitionStyle: "fade"
             });
@@ -181,14 +181,14 @@ jQuery(function($) {
         Slider Header Carousel
      --------------------------------*/
 
-    CALIBER_SETTINGS.inViewPortAnimation = function() {
+    CALIBER_SETTINGS.inViewPortAnimation = function () {
 
         if ($.isFunction($.fn.viewportChecker)) {
 
             $('.inviewport').addClass("hiddenthis").viewportChecker({
                 classToAdd: 'visiblethis',
                 offset: 0,
-                callbackFunction: function(elem) {
+                callbackFunction: function (elem) {
                     var effect = $(elem).attr("data-effect");
                     $(elem).addClass(effect);
                 }
@@ -204,21 +204,21 @@ jQuery(function($) {
         Mobile Menu
      --------------------------------*/
 
-    CALIBER_SETTINGS.mobileMenu = function() {
+    CALIBER_SETTINGS.mobileMenu = function () {
 
         var mobile_str = "";
-        $(".menu-ul").each(function() {
+        $(".menu-ul").each(function () {
             mobile_str += $(this).html();
         });
 
         $(".menu-mobile ul.menu").html(mobile_str);
 
-        $(".menu-toggle").on('click', function() {
+        $(".menu-toggle").on('click', function () {
             $(".menu-mobile.cssmenu").toggleClass("open");
             $(this).toggleClass("mdi-menu mdi-close");
         });
 
-        $('.menu-mobile.cssmenu li.has-sub a').on('click', function(e) {
+        $('.menu-mobile.cssmenu li.has-sub a').on('click', function (e) {
             $(this).parent().children("ul").toggleClass("open");
             $(this).find("i").toggleClass("open");
             e.stopPropagation();
@@ -231,9 +231,9 @@ jQuery(function($) {
         Contact AJAX Form
      --------------------------------*/
 
-    CALIBER_SETTINGS.validateContactForm = function() {
+    CALIBER_SETTINGS.validateContactForm = function () {
 
-        $('#c_name').keyup(function() {
+        $('#c_name').keyup(function () {
             var name = $("#c_name").val();
             if (name == null || name == "") {
                 $("#c_name").removeClass("green");
@@ -245,7 +245,7 @@ jQuery(function($) {
             enable_form();
         });
 
-        $('#c_email').keyup(function() {
+        $('#c_email').keyup(function () {
 
             var email = $("#c_email").val();
             var atpos = email.indexOf("@");
@@ -261,7 +261,7 @@ jQuery(function($) {
             enable_form();
         });
 
-        $('#c_phone').keyup(function() {
+        $('#c_phone').keyup(function () {
 
             var phone = $("#c_phone").val();
             var phoneRE = /^[\d\.\-]+$/;
@@ -277,7 +277,7 @@ jQuery(function($) {
 
         });
 
-        $('#c_message').keyup(function() {
+        $('#c_message').keyup(function () {
 
             var message = $("#c_message").val();
             if (message == null || message == "" || message.length < 9) {
@@ -295,17 +295,17 @@ jQuery(function($) {
     }
 
 
-    CALIBER_SETTINGS.sendMessageAJAX = function() {
+    CALIBER_SETTINGS.sendMessageAJAX = function () {
 
-        $("#c_send").on('click', function() {
+        $("#c_send").on('click', function () {
             if ($(this).hasClass("disabled")) {
-                        $("#response_email").html("Please Fill in your details correctly and try again");
+                $("#response_email").html("Please Fill in your details correctly and try again");
             } else {
 
-              var email = $('#c_email').val();
-              var name = $('#c_name').val();
-              var phone = $('#c_phone').val();
-              var msg = $('#c_message').val();
+                var email = $('#c_email').val();
+                var name = $('#c_name').val();
+                var phone = $('#c_phone').val();
+                var msg = $('#c_message').val();
 
                 var xmlhttp;
                 if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -313,7 +313,7 @@ jQuery(function($) {
                 } else { // code for IE6, IE5
                     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
-                xmlhttp.onreadystatechange = function() {
+                xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState == 1) {
                         $("#response_email").html("Sending...");
                     }
@@ -351,7 +351,7 @@ jQuery(function($) {
 
 
 
-    CALIBER_SETTINGS.isotopeMasonaryGallery = function() {
+    CALIBER_SETTINGS.isotopeMasonaryGallery = function () {
 
 
         if ($.isFunction($.fn.isotope)) {
@@ -366,11 +366,11 @@ jQuery(function($) {
                     queue: false
                 }
             });
-         
-            $('.filter-isotope .filter').click(function(){
+
+            $('.filter-isotope .filter').click(function () {
                 $('.filter-isotope .filter.active').removeClass('active');
                 $(this).addClass('active');
-         
+
                 var selector = $(this).attr('data-filter');
                 $container.isotope({
                     filter: selector,
@@ -380,10 +380,10 @@ jQuery(function($) {
                         easing: 'linear',
                         queue: false
                     }
-                 });
-                 return false;
-            }); 
-        }       
+                });
+                return false;
+            });
+        }
     }
 
 
@@ -393,46 +393,46 @@ jQuery(function($) {
         Settings Panel
      --------------------------------*/
 
-    CALIBER_SETTINGS.settingsPanel = function() {
+    CALIBER_SETTINGS.settingsPanel = function () {
 
-        $(".settings-panel .toggle").on('click', function() {
+        $(".settings-panel .toggle").on('click', function () {
             $(".settings-panel").toggleClass("collapsed");
             $(this).toggleClass("mdi-settings mdi-close");
         });
 
-        $(".settings-panel .style div").on('click', function() {
+        $(".settings-panel .style div").on('click', function () {
             var sections = $(this).attr("data-sections");
-            $("#settings-response").load('settings.php', {"sections":sections} );
+            $("#settings-response").load('settings.php', { "sections": sections });
             window.location.reload();
         });
 
-        $(".settings-panel .colors div").on('click', function() {
+        $(".settings-panel .colors div").on('click', function () {
             var color = $(this).attr("data-color");
             var colorfile = "";
 
-            if(color == "yellow"){
+            if (color == "yellow") {
                 colorfile = "";
             } else {
-                colorfile = "."+color;
+                colorfile = "." + color;
             }
 
             $("#main-style").attr("href", "css/style" + colorfile + ".css");
             $(".settings-panel .colors div").removeClass("active");
             $(this).addClass("active");
 
-            $("#settings-response").load('settings.php', {"color":color} );
+            $("#settings-response").load('settings.php', { "color": color });
 
-            $(".style-dependent").each(function() {
+            $(".style-dependent").each(function () {
                 var src = $(this).attr("src");
                 var oldsrc = src;
-                src = src.replace("yellow",color); 
-                src = src.replace("red",color); 
-                src = src.replace("orange",color); 
-                src = src.replace("blue",color); 
-                src = src.replace("green",color); 
+                src = src.replace("yellow", color);
+                src = src.replace("red", color);
+                src = src.replace("orange", color);
+                src = src.replace("blue", color);
+                src = src.replace("green", color);
 
-                if(src != oldsrc){
-                    $(this).attr("src",src);
+                if (src != oldsrc) {
+                    $(this).attr("src", src);
                 }
 
             });
@@ -448,7 +448,7 @@ jQuery(function($) {
     /******************************
      initialize respective scripts 
      *****************************/
-    $(document).ready(function() {
+    $(document).ready(function () {
         CALIBER_SETTINGS.galleryFiltering();
         CALIBER_SETTINGS.twitterCarousel();
         CALIBER_SETTINGS.imageCarousel();
@@ -460,16 +460,102 @@ jQuery(function($) {
         CALIBER_SETTINGS.fancyBox();
         CALIBER_SETTINGS.parallaxScrolling();
         CALIBER_SETTINGS.settingsPanel();
-       });
+    });
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         CALIBER_SETTINGS.fixedParallaxHeader();
     });
 
-    $(window).resize(function() {});
+    $(window).resize(function () { });
 
-    $(window).load(function() {
+    $(window).load(function () {
         CALIBER_SETTINGS.isotopeMasonaryGallery();
     });
 
 });
+
+
+//Smooth scrolling
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
+
+//scroll rainbow effect
+var TWO_PI = 3.14159 * 2;
+var color1 = [255, 0, 0];
+var color2 = [255, 0, 153];
+var color3 = [204, 0, 255];
+var color1Str = "";
+var color2Str = "";
+var color3Str = "";
+
+function setColor(){
+    if(color1[0]===255 && color1[1]===0 && color1[2]<255 || color1[0]===255 && color1[1]===0 && color1[2]===0){//blue up
+        color1[2]+=17;
+    }
+    else if(color1[0]>0 && color1[1]===0 && color1[2]===255 || color1[0]===255 && color1[1]===0 && color1[2]===255){//red down
+        color1[0]-=17;
+    }
+    else if(color1[0]===0 && color1[1]<255 && color1[2]===255 || color1[0]===0 && color1[1]===0 && color1[2]===255){//green up
+        color1[1]+=17;
+    }
+    else if(color1[0]===0 && color1[1]===255 && color1[2]>0 || color1[0]===0 && color1[1]===255 && color1[2]===255){//blue down
+        color1[2]-=17
+    }
+    else if(color1[0]<255 && color1[1]===255 && color1[2]===0 || color1[0]===0 && color1[1]===0 && color1[2]===0){//red up
+        color1[0]+=17;
+    }
+    else if(color1[0]===255 && color1[1]>0 && color1[2]===0 || color1[0]===255 && color1[1]===255 && color1[2]===0){//green down
+        color1[1]-=17;
+    }
+
+    if(color2[0]===255 && color2[1]===0 && color2[2]<255 || color2[0]===255 && color2[1]===0 && color2[2]===0){//blue up
+        color2[2]+=17;
+    }
+    else if(color2[0]>0 && color2[1]===0 && color2[2]===255 || color2[0]===255 && color2[1]===0 && color2[2]===255){//red down
+        color2[0]-=17;
+    }
+    else if(color2[0]===0 && color2[1]<255 && color2[2]===255 || color2[0]===0 && color2[1]===0 && color2[2]===255){//green up
+        color2[1]+=17;
+    }
+    else if(color2[0]===0 && color2[1]===255 && color2[2]>0 || color2[0]===0 && color2[1]===255 && color2[2]===255){//blue down
+        color2[2]-=17;
+    }
+    else if(color2[0]<255 && color2[1]===255 && color2[2]===0 || color2[0]===0 && color2[1]===0 && color2[2]===0){//red up
+        color2[0]+=17;
+    }
+    else if(color2[0]===255 && color2[1]>0 && color2[2]===0 || color2[0]===255 && color2[1]===255 && color2[2]===0){//green down
+        color2[1]-=17;
+    }
+
+    if(color3[0]===255 && color3[1]===0 && color3[2]<255 || color3[0]===255 && color3[1]===0 && color3[2]===0){//blue up
+        color3[2]+=17;
+    }
+    else if(color3[0]>0 && color3[1]===0 && color3[2]===255 || color3[0]===255 && color3[1]===0 && color3[32]===255){//red down
+        color3[0]-=17;
+    }
+    else if(color3[0]===0 && color3[1]<255 && color3[2]===255 || color3[0]===0 && color3[1]===0 && color3[2]===255){//green up
+        color3[1]+=17;
+    }
+    else if(color3[0]===0 && color3[1]===255 && color3[2]>0 || color3[0]===0 && color3[1]===255 && color3[2]===255){//blue down
+        color3[2]-=17;
+    }
+    else if(color3[0]<255 && color3[1]===255 && color3[2]===0 || color3[0]===0 && color3[1]===0 && color3[2]===0){//red up
+        color3[0]+=17;
+    }
+    else if(color3[0]===255 && color3[1]>0 && color3[2]===0 || color3[0]===255 && color3[1]===255 && color3[2]===0){//green down
+        color3[1]-=17;
+    }
+    color1Str = "rgb(" + color1[0] + "," + color1[1] + "," + color1[2] + ")";
+    color2Str = "rgb(" + color2[0] + "," + color2[1] + "," + color2[2] + ")";
+    color3Str = "rgb(" + color3[0] + "," + color3[1] + "," + color3[2] + ")";
+    document.getElementById("worksPicture1").style.color = color1Str;
+    document.getElementById("worksPicture2").style.color = color2Str;
+    document.getElementById("worksPicture3").style.color = color3Str;
+}
+
+window.onscroll = function () { setColor() };
