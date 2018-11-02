@@ -4083,6 +4083,7 @@ form textarea.green {
     background-image: url('../img/valid-icon.svg');
     background-position: 97% 15px;
     background-repeat: no-repeat;
+    border:2px solid rgb(0, 255, 34);
 }
 
 form input,
