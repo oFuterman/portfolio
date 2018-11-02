@@ -564,7 +564,7 @@ function sendMail() {
     buttonLoader();
     $.ajax({
         type: "POST",
-        url: "/codeNew/Caliber-main-package-2.1.0 copy/Caliber Angled Version - 2.1.0/php/mail_handler.php",
+        url: "omerfuterman.com/php/mail_handler.php",
         dataType: 'json',
         data: {
             'name': $('#c_name').val(),
