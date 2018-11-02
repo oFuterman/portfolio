@@ -573,17 +573,22 @@ function sendMail() {
             'message': $('#c_message').val()
         },
         success: function (data) {
-            console.log('success');
-            console.log(data);
             clearInterval(window.interval);
-            $('#c_send').html('message sent!');
+            console.log(data.response);
+            if(data.response.includes('Message has been sent')){
+                $('#c_send').html('message sent!');
+            }else{
+                $('#c_send').html('message failed');
+            }
             $('#c_send').addClass('disabled');
         },
         error: function (error) {
-            console.log('fail');
-            console.log(error);
             clearInterval(window.interval);
-            $('#c_send').html('message sent!');
+            if(data.response.includes('Message has been sent')){
+                $('#c_send').html('message sent!');
+            }else{
+                $('#c_send').html('message failed');
+            }
             $('#c_send').addClass('disabled');
         }
     });
