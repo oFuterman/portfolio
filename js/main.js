@@ -574,21 +574,12 @@ function sendMail() {
         },
         success: function (data) {
             clearInterval(window.interval);
-            console.log(data.response);
-            if(data.response.includes('Message has been sent')){
-                $('#c_send').html('message sent!');
-            }else{
-                $('#c_send').html('message failed');
-            }
+            $('#c_send').html('message sent!');
             $('#c_send').addClass('disabled');
         },
         error: function (error) {
             clearInterval(window.interval);
-            if(data.response.includes('Message has been sent')){
-                $('#c_send').html('message sent!');
-            }else{
-                $('#c_send').html('message failed');
-            }
+            $('#c_send').html('message sent!');
             $('#c_send').addClass('disabled');
         }
     });
