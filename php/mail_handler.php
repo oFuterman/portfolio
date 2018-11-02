@@ -37,7 +37,7 @@ $mail->addAddress('omerfuterman@gmail.com', 'First Recipient\'s name');  // Add 
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = $_POST['name'].' sent you an email from your website';
-$mail->Body    = 'Phone: '.$_POST['phone'].'<br>Email: '.$_POST['email'].'<br><br>Message:<br>'.$_POST['message'];
+$mail->Body    = 'Phone: '.$_POST['phone'].'<br>Email: '.$_POST['email'].'<br><br><br>Message:<br><br>'.$_POST['message'];
 $mail->AltBody = $_POST['message'];
 
 if(!$mail->send()) {
