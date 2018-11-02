@@ -237,10 +237,8 @@ jQuery(function ($) {
             var name = $("#c_name").val();
             if (name == null || name == "") {
                 $("#c_name").removeClass("green");
-                console.log(name + "name err");
             } else {
                 $("#c_name").addClass("green");
-                console.log("name done");
             }
             enable_form();
         });
@@ -253,10 +251,8 @@ jQuery(function ($) {
 
             if (email == null || email == "" || atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
                 $("#c_email").removeClass("green");
-                console.log("email err");
             } else {
                 $("#c_email").addClass("green");
-                console.log("email done");
             }
             enable_form();
         });
@@ -268,10 +264,8 @@ jQuery(function ($) {
 
             if (phone == null || phone == "" || phone.length < 10 || !phoneRE.test(phone)) {
                 $("#c_phone").removeClass("green");
-                console.log("phone err");
             } else {
                 $("#c_phone").addClass("green");
-                console.log("phone done");
             }
             enable_form();
 
@@ -282,10 +276,8 @@ jQuery(function ($) {
             var message = $("#c_message").val();
             if (message == null || message == "" || message.length < 9) {
                 $("#c_message").removeClass("green");
-                console.log("message err");
             } else {
                 $("#c_message").addClass("green");
-                console.log("message done");
             }
 
             enable_form();
@@ -295,41 +287,41 @@ jQuery(function ($) {
     }
 
 
-    CALIBER_SETTINGS.sendMessageAJAX = function () {
+    // CALIBER_SETTINGS.sendMessageAJAX = function () {
 
-        $("#c_send").on('click', function () {
-            if ($(this).hasClass("disabled")) {
-                $("#response_email").html("Please Fill in your details correctly and try again");
-            } else {
+    //     $("#c_send").on('click', function () {
+    //         if ($(this).hasClass("disabled")) {
+    //             $("#response_email").html("Please Fill in your details correctly and try again");
+    //         } else {
 
-                var email = $('#c_email').val();
-                var name = $('#c_name').val();
-                var phone = $('#c_phone').val();
-                var msg = $('#c_message').val();
+    //             var email = $('#c_email').val();
+    //             var name = $('#c_name').val();
+    //             var phone = $('#c_phone').val();
+    //             var msg = $('#c_message').val();
 
-                var xmlhttp;
-                if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-                    xmlhttp = new XMLHttpRequest();
-                } else { // code for IE6, IE5
-                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                xmlhttp.onreadystatechange = function () {
-                    if (xmlhttp.readyState == 1) {
-                        $("#response_email").html("Sending...");
-                    }
-                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        $("#response_email").html(xmlhttp.responseText);
-                    }
-                }
-                xmlhttp.open("POST", "maintainemail.php", true);
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xmlhttp.send("email=" + encodeURIComponent(email) + "&name=" + encodeURIComponent(name) + "&phone=" + encodeURIComponent(phone) + "&msg=" + encodeURIComponent(msg));
-                return false;
+    //             var xmlhttp;
+    //             if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+    //                 xmlhttp = new XMLHttpRequest();
+    //             } else { // code for IE6, IE5
+    //                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    //             }
+    //             xmlhttp.onreadystatechange = function () {
+    //                 if (xmlhttp.readyState == 1) {
+    //                     $("#response_email").html("Sending...");
+    //                 }
+    //                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    //                     $("#response_email").html(xmlhttp.responseText);
+    //                 }
+    //             }
+    //             xmlhttp.open("POST", "maintainemail.php", true);
+    //             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //             xmlhttp.send("email=" + encodeURIComponent(email) + "&name=" + encodeURIComponent(name) + "&phone=" + encodeURIComponent(phone) + "&msg=" + encodeURIComponent(msg));
+    //             return false;
 
-            }
-        });
+    //         }
+    //     });
 
-    }
+    // }
 
 
     function enable_form() {
@@ -338,10 +330,8 @@ jQuery(function ($) {
             $("#c_email").hasClass("green") &&
             $("#c_message").hasClass("green")) {
             $("#c_send").removeClass("disabled");
-            console.log("enabled");
         } else {
             $("#c_send").addClass("disabled");
-            console.log("disabled");
         }
 
     }
@@ -456,11 +446,23 @@ jQuery(function ($) {
         CALIBER_SETTINGS.inViewPortAnimation();
         CALIBER_SETTINGS.mobileMenu();
         CALIBER_SETTINGS.validateContactForm();
-        CALIBER_SETTINGS.sendMessageAJAX();
+        // CALIBER_SETTINGS.sendMessageAJAX();
         CALIBER_SETTINGS.fancyBox();
         CALIBER_SETTINGS.parallaxScrolling();
         CALIBER_SETTINGS.settingsPanel();
+        formSubmit();
     });
+
+    function formSubmit() {
+        $('#c_send').click(handleFormSubmit);
+    }
+
+    function handleFormSubmit() {
+        if ($('#c_send').hasClass('disabled')) { }
+        else {
+            sendMail();
+        }
+    }
 
     $(window).scroll(function () {
         CALIBER_SETTINGS.fixedParallaxHeader();
@@ -493,62 +495,62 @@ var color1Str = "";
 var color2Str = "";
 var color3Str = "";
 
-function setColor(){
-    if(color1[0]===255 && color1[1]===0 && color1[2]<255 || color1[0]===255 && color1[1]===0 && color1[2]===0){//blue up
-        color1[2]+=17;
+function setColor() {
+    if (color1[0] === 255 && color1[1] === 0 && color1[2] < 255 || color1[0] === 255 && color1[1] === 0 && color1[2] === 0) {//blue up
+        color1[2] += 17;
     }
-    else if(color1[0]>0 && color1[1]===0 && color1[2]===255 || color1[0]===255 && color1[1]===0 && color1[2]===255){//red down
-        color1[0]-=17;
+    else if (color1[0] > 0 && color1[1] === 0 && color1[2] === 255 || color1[0] === 255 && color1[1] === 0 && color1[2] === 255) {//red down
+        color1[0] -= 17;
     }
-    else if(color1[0]===0 && color1[1]<255 && color1[2]===255 || color1[0]===0 && color1[1]===0 && color1[2]===255){//green up
-        color1[1]+=17;
+    else if (color1[0] === 0 && color1[1] < 255 && color1[2] === 255 || color1[0] === 0 && color1[1] === 0 && color1[2] === 255) {//green up
+        color1[1] += 17;
     }
-    else if(color1[0]===0 && color1[1]===255 && color1[2]>0 || color1[0]===0 && color1[1]===255 && color1[2]===255){//blue down
-        color1[2]-=17
+    else if (color1[0] === 0 && color1[1] === 255 && color1[2] > 0 || color1[0] === 0 && color1[1] === 255 && color1[2] === 255) {//blue down
+        color1[2] -= 17
     }
-    else if(color1[0]<255 && color1[1]===255 && color1[2]===0 || color1[0]===0 && color1[1]===0 && color1[2]===0){//red up
-        color1[0]+=17;
+    else if (color1[0] < 255 && color1[1] === 255 && color1[2] === 0 || color1[0] === 0 && color1[1] === 0 && color1[2] === 0) {//red up
+        color1[0] += 17;
     }
-    else if(color1[0]===255 && color1[1]>0 && color1[2]===0 || color1[0]===255 && color1[1]===255 && color1[2]===0){//green down
-        color1[1]-=17;
-    }
-
-    if(color2[0]===255 && color2[1]===0 && color2[2]<255 || color2[0]===255 && color2[1]===0 && color2[2]===0){//blue up
-        color2[2]+=17;
-    }
-    else if(color2[0]>0 && color2[1]===0 && color2[2]===255 || color2[0]===255 && color2[1]===0 && color2[2]===255){//red down
-        color2[0]-=17;
-    }
-    else if(color2[0]===0 && color2[1]<255 && color2[2]===255 || color2[0]===0 && color2[1]===0 && color2[2]===255){//green up
-        color2[1]+=17;
-    }
-    else if(color2[0]===0 && color2[1]===255 && color2[2]>0 || color2[0]===0 && color2[1]===255 && color2[2]===255){//blue down
-        color2[2]-=17;
-    }
-    else if(color2[0]<255 && color2[1]===255 && color2[2]===0 || color2[0]===0 && color2[1]===0 && color2[2]===0){//red up
-        color2[0]+=17;
-    }
-    else if(color2[0]===255 && color2[1]>0 && color2[2]===0 || color2[0]===255 && color2[1]===255 && color2[2]===0){//green down
-        color2[1]-=17;
+    else if (color1[0] === 255 && color1[1] > 0 && color1[2] === 0 || color1[0] === 255 && color1[1] === 255 && color1[2] === 0) {//green down
+        color1[1] -= 17;
     }
 
-    if(color3[0]===255 && color3[1]===0 && color3[2]<255 || color3[0]===255 && color3[1]===0 && color3[2]===0){//blue up
-        color3[2]+=17;
+    if (color2[0] === 255 && color2[1] === 0 && color2[2] < 255 || color2[0] === 255 && color2[1] === 0 && color2[2] === 0) {//blue up
+        color2[2] += 17;
     }
-    else if(color3[0]>0 && color3[1]===0 && color3[2]===255 || color3[0]===255 && color3[1]===0 && color3[32]===255){//red down
-        color3[0]-=17;
+    else if (color2[0] > 0 && color2[1] === 0 && color2[2] === 255 || color2[0] === 255 && color2[1] === 0 && color2[2] === 255) {//red down
+        color2[0] -= 17;
     }
-    else if(color3[0]===0 && color3[1]<255 && color3[2]===255 || color3[0]===0 && color3[1]===0 && color3[2]===255){//green up
-        color3[1]+=17;
+    else if (color2[0] === 0 && color2[1] < 255 && color2[2] === 255 || color2[0] === 0 && color2[1] === 0 && color2[2] === 255) {//green up
+        color2[1] += 17;
     }
-    else if(color3[0]===0 && color3[1]===255 && color3[2]>0 || color3[0]===0 && color3[1]===255 && color3[2]===255){//blue down
-        color3[2]-=17;
+    else if (color2[0] === 0 && color2[1] === 255 && color2[2] > 0 || color2[0] === 0 && color2[1] === 255 && color2[2] === 255) {//blue down
+        color2[2] -= 17;
     }
-    else if(color3[0]<255 && color3[1]===255 && color3[2]===0 || color3[0]===0 && color3[1]===0 && color3[2]===0){//red up
-        color3[0]+=17;
+    else if (color2[0] < 255 && color2[1] === 255 && color2[2] === 0 || color2[0] === 0 && color2[1] === 0 && color2[2] === 0) {//red up
+        color2[0] += 17;
     }
-    else if(color3[0]===255 && color3[1]>0 && color3[2]===0 || color3[0]===255 && color3[1]===255 && color3[2]===0){//green down
-        color3[1]-=17;
+    else if (color2[0] === 255 && color2[1] > 0 && color2[2] === 0 || color2[0] === 255 && color2[1] === 255 && color2[2] === 0) {//green down
+        color2[1] -= 17;
+    }
+
+    if (color3[0] === 255 && color3[1] === 0 && color3[2] < 255 || color3[0] === 255 && color3[1] === 0 && color3[2] === 0) {//blue up
+        color3[2] += 17;
+    }
+    else if (color3[0] > 0 && color3[1] === 0 && color3[2] === 255 || color3[0] === 255 && color3[1] === 0 && color3[32] === 255) {//red down
+        color3[0] -= 17;
+    }
+    else if (color3[0] === 0 && color3[1] < 255 && color3[2] === 255 || color3[0] === 0 && color3[1] === 0 && color3[2] === 255) {//green up
+        color3[1] += 17;
+    }
+    else if (color3[0] === 0 && color3[1] === 255 && color3[2] > 0 || color3[0] === 0 && color3[1] === 255 && color3[2] === 255) {//blue down
+        color3[2] -= 17;
+    }
+    else if (color3[0] < 255 && color3[1] === 255 && color3[2] === 0 || color3[0] === 0 && color3[1] === 0 && color3[2] === 0) {//red up
+        color3[0] += 17;
+    }
+    else if (color3[0] === 255 && color3[1] > 0 && color3[2] === 0 || color3[0] === 255 && color3[1] === 255 && color3[2] === 0) {//green down
+        color3[1] -= 17;
     }
     color1Str = "rgb(" + color1[0] + "," + color1[1] + "," + color1[2] + ")";
     color2Str = "rgb(" + color2[0] + "," + color2[1] + "," + color2[2] + ")";
@@ -556,6 +558,62 @@ function setColor(){
     document.getElementById("worksPicture1").style.color = color1Str;
     document.getElementById("worksPicture2").style.color = color2Str;
     document.getElementById("worksPicture3").style.color = color3Str;
+}
+
+function sendMail() {
+    buttonLoader();
+    $.ajax({
+        type: "POST",
+        url: "/codeNew/Caliber-main-package-2.1.0 copy/Caliber Angled Version - 2.1.0/php/mail_handler.php",
+        dataType: 'json',
+        data: {
+            'name': $('#c_name').val(),
+            'email': $('#c_email').val(),
+            'phone': $('#c_phone').val(),
+            'message': $('#c_message').val()
+        },
+        success: function (data) {
+            console.log('success');
+            console.log(data);
+            clearInterval(window.interval);
+            $('#c_send').html('message sent!');
+            $('#c_send').addClass('disabled');
+        },
+        error: function (error) {
+            console.log('fail');
+            console.log(error);
+            clearInterval(window.interval);
+            $('#c_send').html('message sent!');
+            $('#c_send').addClass('disabled');
+        }
+    });
+}
+
+var count=0;
+function buttonLoader(clear) {
+    $('#c_send').html('.')
+    count++;
+    window.interval = setInterval(function () {
+        if(count===0){
+            $('#c_send').html('.');
+            count++;
+        }else if(count===1){
+            $('#c_send').html('..');
+            count++;
+        }else if(count===2){
+            $('#c_send').html('...');
+            count++;
+        }else if(count===3){
+            $('#c_send').html('....');
+            count++;
+        }else{
+            $('#c_send').html('.....');
+            count=0;
+        }
+        if(clear){
+            clearInterval(interval);
+        }
+    }, 200);
 }
 
 window.onscroll = function () { setColor() };
