@@ -233,6 +233,16 @@ jQuery(function ($) {
 
     CALIBER_SETTINGS.validateContactForm = function () {
 
+        // setInterval(function () {
+        //     var name = $("#c_name").val();
+        //     if (name == null || name == "") {
+        //         $("#c_name").removeClass("green");
+        //     } else {
+        //         $("#c_name").addClass("green");
+        //     }
+        //     enable_form();
+        // },500);
+        
         $('#c_name').keyup(function () {
             var name = $("#c_name").val();
             if (name == null || name == "") {
