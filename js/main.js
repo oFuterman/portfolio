@@ -564,7 +564,7 @@ function sendMail() {
     buttonLoader();
     $.ajax({
         type: "POST",
-        url: "omerfuterman.com/php/mail_handler.php",
+        url: "/php/mail_handler.php",
         dataType: 'json',
         data: {
             'name': $('#c_name').val(),
